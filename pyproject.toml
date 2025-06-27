@@ -1,0 +1,26 @@
+[project]
+name = "authentication-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "alembic>=1.16.2",
+    "asyncpg>=0.30.0",
+    "authlib>=1.6.0",
+    "cuid>=0.4",
+    "fastapi>=0.115.13",
+    "httpx>=0.28.1",
+    "passlib[argon2]>=1.7.4",
+    "pydantic-settings>=2.10.1",
+    "python-dotenv>=1.1.1",
+    "redis>=6.2.0",
+    "resend>=2.10.0",
+    "sqlalchemy[asyncio]>=2.0.41",
+    "uvicorn[standard]>=0.34.3",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.0",
+]
