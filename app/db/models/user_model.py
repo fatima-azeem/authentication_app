@@ -22,6 +22,7 @@ class User(Base):
     password: Mapped[str] = mapped_column(String, nullable=False)
     role: Mapped[UserRole] = mapped_column(Enum(UserRole), default=UserRole.USER)
     is_email_verified: Mapped[bool] = mapped_column(Boolean, default=False)
+    is_term_accepted: Mapped[bool] = mapped_column(Boolean, default=False)
     otp_code: Mapped[Optional[str]] = mapped_column(String, nullable=True)
     otp_purpose: Mapped[Optional[OtpPurpose]] = mapped_column(
         Enum(OtpPurpose), nullable=True
