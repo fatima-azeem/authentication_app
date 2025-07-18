@@ -10,3 +10,11 @@ class RegisterSchema(BaseModel):
 
 class RegisterResponse(BaseModel):
     message: str
+
+
+class ResendOtpSchema(BaseModel):
+    email: EmailStr
+
+
+class ResendOtpResponse(BaseModel):
+    message: str

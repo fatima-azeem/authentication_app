@@ -1,5 +1,5 @@
 from typing import Optional
-from sqlalchemy import String, DateTime, ForeignKey, Index
+from sqlalchemy import String, DateTime, ForeignKey, Index, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
 
@@ -13,6 +13,8 @@ class Session(Base):
 
     id: Mapped[str] = mapped_column(String, primary_key=True, default=generate_cuid)
     user_id: Mapped[str] = mapped_column(ForeignKey("user.id", ondelete="CASCADE"))
+    refresh_token: Mapped[str] = mapped_column(Text)
+    expires_at: Mapped[DateTime] = mapped_column(DateTime)
     device_id: Mapped[str] = mapped_column(String)
     ip_address: Mapped[str] = mapped_column(String)
     user_agent: Mapped[Optional[str]] = mapped_column(String, nullable=True)
@@ -27,4 +29,5 @@ class Session(Base):
     __table_args__ = (
         Index("ix_session_user_id", "user_id"),
         Index("ix_session_device_id", "device_id"),
+        Index("ix_session_refresh_token", "refresh_token"),
     )

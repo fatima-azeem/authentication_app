@@ -41,6 +41,16 @@ async def reset_password(token: str, new_password: str, db: AsyncSession):
         raise HTTPException(status_code=400, detail="User not found")
     from passlib.hash import argon2
 
+    # Hash the new password
     user.password = argon2.hash(new_password)
+    
+    # Mark the reset token as used
     reset_token.used = True
+    
+    # Invalidate all existing sessions for this user (security best practice)
+    from app.db.models.session_model import Session
+    await db.execute(
+        Session.__table__.delete().where(Session.user_id == user.id)
+    )
+    
     await db.commit()
