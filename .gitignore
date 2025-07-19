@@ -79,3 +79,6 @@ uv.lock
 
 # Ruff cache
 .ruff_cache/
+
+# Test scripts with sensitive data
+testapi.sh
