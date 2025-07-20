@@ -58,5 +58,7 @@ async def register_user_service(
     logging.info(f"User registered: {user.email}, OTP sent: {otp_code}")
 
     return RegisterResponse(
-        message="Registration successful. Please verify your email."
+        message="Registration successful. Please verify your email.",
+        email=payload.email,
+        user_id=str(user.id)
     )
