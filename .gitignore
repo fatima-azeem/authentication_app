@@ -82,3 +82,77 @@ uv.lock
 
 # Test scripts with sensitive data
 testapi.sh
+
+# Docker related files
+.dockerignore
+docker-compose.override.yml
+docker-compose.local.yml
+.env.docker
+.env.production
+.env.staging
+
+# Docker volumes and data
+postgres_data/
+redis_data/
+mysql_data/
+mongodb_data/
+logs/
+backups/
+
+# Docker build context exclusions
+.git/
+.github/
+.pytest_cache/
+node_modules/
+*.md
+!README.md
+
+# SSL certificates and keys
+*.pem
+*.key
+*.crt
+*.cert
+ssl/
+certs/
+nginx/ssl/
+
+# Container logs
+container-logs/
+docker-logs/
+
+# Docker secrets
+secrets/
+.secrets/
+docker-secrets/
+
+# Nginx configs with sensitive data
+nginx/conf.d/
+
+# Database dumps and backups
+*.sql
+*.dump
+*.backup
+dump.rdb
+
+# Redis data
+appendonly.aof
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+temp/
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db

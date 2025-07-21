@@ -1,0 +1,125 @@
+# Include any files or directories that you don't want to be copied to your
+# container here (e.g., local build artifacts, temporary files, etc.).
+#
+# For more help, visit the .dockerignore file reference guide at
+# https://docs.docker.com/go/build-context-dockerignore/
+
+# OS files
+**/.DS_Store
+**/Thumbs.db
+
+# Python
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.Python
+**/.pytest_cache
+**/.coverage
+**/.venv
+**/venv/
+**/.ruff_cache/
+**/.mypy_cache/
+
+# IDE and editors
+**/.classpath
+**/.vs
+**/.vscode
+**/.idea
+**/*.swp
+**/*.swo
+**/.project
+**/.settings
+**/.toolstarget
+**/*.*proj.user
+
+# Environment and secrets
+**/.env
+**/.env.*
+**/secrets.dev.yaml
+**/values.dev.yaml
+
+# Git
+**/.git
+**/.gitignore
+**/.github
+
+# Docker
+**/.dockerignore
+**/docker-compose*
+**/compose.y*ml
+**/Dockerfile*
+
+# Build artifacts
+**/bin
+**/obj
+**/build
+**/dist
+**/*.egg-info/
+
+# Database files
+**/*.sqlite3
+**/*.db
+**/*.sql
+**/*.dump
+**/dump.rdb
+**/appendonly.aof
+
+# Logs and temporary files
+**/logs/
+**/*.log
+**/*.tmp
+**/*.temp
+**/.tmp/
+**/temp/
+
+# Test files
+**/test/
+**/tests/
+**/*_test.py
+**/test_*.py
+
+# Coverage reports
+**/htmlcov/
+**/.tox/
+**/.nox/
+**/coverage.xml
+**/*.cover
+**/.hypothesis/
+
+# Node modules (if any)
+**/node_modules
+**/npm-debug.log
+
+# Charts and documentation
+**/charts
+LICENSE
+README.md
+**/*.md
+!**/README.md
+
+# Lock files
+**/poetry.lock
+**/Pipfile.lock
+**/uv.lock
+
+# Scripts with sensitive data
+**/testapi.sh
+**/scripts/
+
+# SSL certificates
+**/ssl/
+**/*.pem
+**/*.key
+**/*.crt
+**/*.cert
+
+# Backup and data directories
+**/backups/
+**/postgres_data/
+**/redis_data/
+**/mongodb_data/
+**/mysql_data/
+
+# Alembic compiled files
+**/alembic/versions/*.pyc
