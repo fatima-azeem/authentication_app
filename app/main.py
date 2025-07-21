@@ -25,3 +25,4 @@ app.include_router(password_reset_router)
 async def db_test(session: AsyncSession = Depends(get_db_session)):
     result = await session.execute(text("SELECT 101"))
     return {"db_response": result.scalar_one()}
+
