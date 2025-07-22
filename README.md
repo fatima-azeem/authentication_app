@@ -466,3 +466,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 *This project is under active development. Contributions and feedback are welcome!*
+# this project has been deployed to my home vps server
