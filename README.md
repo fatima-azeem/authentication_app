@@ -5,13 +5,7 @@ This robust backend provides secure user authentication, email verification, pas
 
 ## ✨ Features
 
-### 🚀 Core Authentication
-- **User Registration** with email verification
-- **JWT-based Login** with access & refresh tokens
-- **Password Reset** with OTP verification
-- **Email Verification** via OTP codes
-- **Session Management** with device tracking
-- **Secure Logout** with token invalidation
+
 
 ### 🛠️ Technical Stack
 - **FastAPI** - High-performance async API framework
@@ -22,6 +16,14 @@ This robust backend provides secure user authentication, email verification, pas
 - **Argon2** - Industry-standard password hashing
 - **Resend** - Reliable email service integration
 - **Pydantic** - Data validation and settings management
+
+### 🚀 Core Authentication
+- **User Registration** with email verification
+- **JWT-based Login** with access & refresh tokens
+- **Password Reset** with OTP verification
+- **Email Verification** via OTP codes
+- **Session Management** with device tracking
+- **Secure Logout** with token invalidation
 
 ### 🔧 Architecture & Quality
 - **Async/Await** - Full asynchronous support
